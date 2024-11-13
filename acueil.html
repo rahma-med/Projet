@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme Licence Informatique</title>
+    <!-- Lien vers le fichier CSS de Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Votre CSS amélioré */
+        body {
+            background-color: #F7F7F7;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        header {
+            background-color: #4A90E2;
+            color: white;
+            padding: 20px 20px;
+            text-align: center;
+            border-bottom: 4px solid #3A7BD5;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #4A90E2;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            background-color: #6CCB3C;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px 8px 0 0;
+            padding: 15px;
+        }
+
+        .card-body ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .card-body ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .card-body ul li::before {
+            content: "•";
+            color: #4A90E2;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .contact {
+            background-color: #E9F8F3;
+            color: #444;
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .contact .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact .contact-info i {
+            font-size: 2rem;
+            margin-right: 20px;
+        }
+
+        .contact .contact-info p {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .contact a {
+            color: #4A90E2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #3A7BD5;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .card-body ul li {
+                font-size: 1rem;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .contact .contact-info p {
+                font-size: 1rem;
+            }
+
+            footer p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <!-- Lien vers les icônes de FontAwesome pour les icônes de contact -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Université RRRNN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#programmes">Programmes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <!-- Notification Badge -->
+            <ul class="navbar-nav ml-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="notificationButton">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge badge-danger" id="notificationCount">3</span> <!-- Nombre de notifications -->
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- En-tête du site -->
+    <header>
+        <h1>Programme Informatique - Licence</h1>
+        <p>Bienvenue sur la page du programme de licence en Informatique</p>
+    </header>
+
+    <div class="container">
+        <!-- Introduction -->
+        <section class="introduction">
+            <h2 class="section-title">À propos du programme</h2>
+            <p>Ce programme de licence en Informatique vise à fournir aux étudiants une base solide dans les domaines de l'informatique théorique et appliquée, en les préparant aux défis techniques et professionnels.</p>
+        </section>
+
+        <!-- Programme par semestre -->
+        <section class="semesters" id="programmes">
+            <h2 class="section-title">Programme par semestre</h2>
+
+            <!-- Semestre L1 -->
+            <h3 class="section-title">Licence 1</h3>
+            <div class="row">
+                <!-- Semestre 1 -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Semestre 1
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="introduction-programmation.html">Introduction Algorithme</a></li>
+                                <li><a href="mathematiques-discretes.html">Analyse I </a></li>
+                                <li><a href="systemes-exploitation.html">Representation des donnee </a></li>
+                                <li><a href="base-donnees.html">Logique Arthmetique</a></li>
+                                <li><a href="base-donnees.html">Outils informatique </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Semestre 2 -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Semestre 2
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="algorithmes-structures.html">Algorithme procedural</a></li>
+                                <li><a href="reseaux-informatiques.html">Réseaux informatiques</a></li>
+                                <li><a href="architecture-ordinateurs.html">Introduction de systeme d'exploitation</a></li>
+                                <li><a href="programmation-web.html">Algebre </a></li>
+                                <li><a href="programmation-web.html">Analyse II </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semestre L2 -->
+            <h3 class="section-title">Licence 2</h3>
+            <div class="row">
+                <!-- Semestre 3 -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Semestre 3
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="programmation-orientee-objet.html">Structures de données lineaire</a></li>
+                                <li><a href="analyse-algorithmique.html">Reseaux et protocoles</a></li>
+                                <li><a href="bases-de-donnees-avancees.html">Introduction bases de données</a></li>
+                                <li><a href="intelligence-artificielle.html">Achictutre des ordinateurs</a></li>
+                                <li><a href="intelligence-artificielle.html">Probabilite et Statisque</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Semestre 4 -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Semestre 4
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="design-patterns.html">Structure des donnees arborescences </a></li>
+                                <li><a href="reseaux-avances.html">Adminitration de base de donnee</a></li>
+                                <li><a href="securite-informatique.html">Programmation objet orient </a></li>
+                                <li><a href="projet-web.html">Programme web</a></li>
+                                <li><a href="projet-web.html">Systeme d'exploitation</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semestre L3 -->
+            <h3 class="section-title">Licence 3</h3>
+            <div class="row">
+                <!-- Semestre 5 -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Semestre 5
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="programmation-avancee.html">Algorithme de graphe</a></li>
+                                <li><a href="developpement-mobile.html">Base des donnee avanee</a></li>
+                                <li><a href="big-data.html">Programmation orient objet</a></li>
+                                <li><a href="cloud-computing.html">Gestion de projet </a></li>
+                                <li><a href="cloud-computing.html">Archituctre des ordinateurs </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Semestre 6 -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            Semestre 6
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li><a href="stage-informatique.html">Adminitration des systemes</a></li>
+                                <li><a href="projet-de-fin-d-etudes.html">Genie logiciel</a></li>
+                                <li><a href="gestion-de-projet.html">Intelligence arthificiel</a></li>
+                                <li><a href="cybersecurite.html">Projet tutore</a></li>
+                                <li><a href="cybersecurite.html">Langage et Compilation</a></li>
+                                <li><a href="cybersecurite.html">Fondementa Theorique</a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Section Contact -->
+        <section class="contact" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i>
+                <p>Email : <a href="mailto:contact@universite.com">contact@universite.com</a></p>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-phone"></i>
+                <p>Téléphone : +77758161</p>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Adresse : Université RRRNN, 123 Rue de l'Informatique, Paris</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Université RRRNN - Tous droits réservés</p>
+    </footer>
+
+    <!-- Scripts Bootstrap et jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script pour gérer les notifications -->
+    <script>
+        document.getElementById('notificationButton').addEventListener('click', function() {
+            document.getElementById('notificationCount').textContent = '0';
+            alert("Vous avez consulté vos notifications !");
+        });
+    </script>
+
+</body>
+</html>
+
+
